@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satvik Jogadand | Insurance & Risk Management Professional</title>
+    <meta name="description" content="Professional portfolio of Satvik Jogadand, specializing in Insurance and Risk Management">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #00f2ff;
+            --dark-bg: #0a0a1a;
+            --glass-effect: rgba(10, 10, 26, 0.7);
+            --accent-color: #ff4d4d;
+            --text-primary: rgba(255,255,255,0.9);
+            --text-secondary: rgba(255,255,255,0.6);
+            --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        @font-face {
+            font-family: 'Neon';
+            src: url('https://assets.codepen.io/2585/Neon.ttf') format('truetype');
+            font-display: swap;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(0, 242, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(255,77,77,0.05) 0%, transparent 50%);
+        }
+        
+        /* Accessibility improvements */
+        a:focus, button:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+        
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+        
+        /* Main layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10, 10, 26, 0.5);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 242, 255, 0.1);
+            transition: var(--transition);
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 300;
+            color: var(--text-primary);
+            text-decoration: none;
+            letter-spacing: 2px;
+            font-family: 'Neon', sans-serif;
+        }
+        
+        .logo span {
+            color: var(--primary-color);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 1px;
+            position: relative;
+            padding-bottom: 5px;
+            transition: var(--transition);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover,
+        .nav-links a:focus {
+            color: var(--primary-color);
+        }
+        
+        .nav-links a:hover::after,
+        .nav-links a:focus::after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            max-width: 600px;
+            z-index: 2;
+        }
+        
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 20px;
+            font-weight: 300;
+            line-height: 1.2;
+            background: linear-gradient(to right, #fff, var(--primary-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            max-width: 500px;
+        }
+        
+        .divider {
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(to right, var(--primary-color), transparent);
+            margin: 30px 0;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 30px;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            background: transparent;
+            cursor: pointer;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 242, 255, 0.2), transparent);
+            transition: var(--transition);
+        }
+        
+        .btn:hover,
+        .btn:focus {
+            background-color: rgba(0, 242, 255, 0.1);
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.2);
+        }
+        
+        .btn:hover::before,
+        .btn:focus::before {
+            left: 100%;
+        }
+        
+        /* Particles Background */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .particle {
+            position: absolute;
+            background: var(--primary-color);
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: float linear infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(-100vh) rotate(360deg); }
+        }
+        
+        /* Sections */
+        .section {
+            padding: 120px 0;
+            position: relative;
+        }
+        
+        .section-title {
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: clamp(1.75rem, 3vw, 2.5rem);
+            margin-bottom: 15px;
+            font-weight: 300;
+            color: var(--text-primary);
+        }
+        
+        /* About Section */
+        .about-container {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .card {
+            flex: 1;
+            min-height: 400px;
+            background: var(--glass-effect);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(0, 242, 255, 0.2);
+            padding: 40px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to bottom right,
+                transparent 0%,
+                rgba(0, 242, 255, 0.1) 50%,
+                transparent 100%
+            );
+            transform: rotate(30deg);
+            animation: shine 6s infinite;
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%) rotate(30deg); }
+            100% { transform: translateX(100%) rotate(30deg); }
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 40px;
+        }
+        
+        .skill-tag {
+            padding: 8px 20px;
+            background: rgba(0, 242, 255, 0.1);
+            border: 1px solid rgba(0, 242, 255, 0.2);
+            font-size: 14px;
+            color: var(--primary-color);
+            border-radius: 20px;
+            transition: var(--transition);
+        }
+        
+        .skill-tag:hover {
+            background: rgba(0, 242, 255, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 242, 255, 0.1);
+        }
+        
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent 0%, var(--primary-color) 10%, var(--primary-color) 90%, transparent 100%);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 60px;
+            width: 100%;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            padding-right: calc(50% + 30px);
+            text-align: right;
+        }
+        
+        .timeline-item:nth-child(even) {
+            padding-left: calc(50% + 30px);
+        }
+        
+        .timeline-content {
+            background: var(--glass-effect);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            border: 1px solid rgba(0, 242, 255, 0.2);
+            padding: 30px;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content {
+            transform-origin: right center;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content {
+            transform-origin: left center;
+        }
+        
+        .timeline-content:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 30px rgba(0, 242, 255, 0.1);
+        }
+        
+        .timeline-date {
+            color: var(--primary-color);
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .timeline-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+        
+        .timeline-desc {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 16px;
+            height: 16px;
+            background: var(--dark-bg);
+            border: 2px solid var(--primary-color);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+        
+        /* Contact Section */
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 242, 255, 0.1);
+            border-radius: 50%;
+            color: var(--primary-color);
+        }
+        
+        .contact-item h4 {
+            color: var(--text-primary);
+            margin-bottom: 5px;
+            font-weight: 400;
+        }
+        
+        .contact-item p {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        
+        /* Voice Wave Animation */
+        .voice-wave {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            margin: 30px 0;
+        }
+        
+        .wave-bar {
+            width: 4px;
+            height: 20px;
+            background: var(--primary-color);
+            margin: 0 2px;
+            border-radius: 2px;
+            animation: wave 1.5s infinite ease-in-out;
+        }
+        
+        @keyframes wave {
+            0%, 100% { height: 5px; }
+            50% { height: 20px; }
+        }
+        
+        /* Chat Assistant */
+        .chat-assistant {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 300px;
+            background: var(--glass-effect);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(0, 242, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 242, 255, 0.1);
+            overflow: hidden;
+            z-index: 1000;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .chat-assistant.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .chat-header {
+            padding: 15px 20px;
+            background: rgba(0, 242, 255, 0.1);
+            border-bottom: 1px solid rgba(0, 242, 255, 0.2);
+            display: flex;
+            align-items: center;
+        }
+        
+        .chat-status {
+            width: 10px;
+            height: 10px;
+            background: #00ff00;
+            border-radius: 50%;
+            margin-right: 10px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.3; }
+            100% { opacity: 1; }
+        }
+        
+        .chat-title {
+            font-size: 14px;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+        }
+        
+        .chat-close {
+            margin-left: auto;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: var(--transition);
+            background: none;
+            border: none;
+            color: inherit;
+        }
+        
+        .chat-close:hover,
+        .chat-close:focus {
+            color: var(--primary-color);
+        }
+        
+        .chat-messages {
+            height: 200px;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        .chat-message {
+            margin-bottom: 15px;
+            display: flex;
+        }
+        
+        .chat-message.ai {
+            justify-content: flex-start;
+        }
+        
+        .chat-message.user {
+            justify-content: flex-end;
+        }
+        
+        .message-content {
+            max-width: 80%;
+            padding: 10px 15px;
+            border-radius: 15px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .ai .message-content {
+            background: rgba(0, 242, 255, 0.1);
+            border: 1px solid rgba(0, 242, 255, 0.2);
+            color: var(--text-primary);
+            border-top-left-radius: 0;
+        }
+        
+        .user .message-content {
+            background: rgba(255, 77, 77, 0.1);
+            border: 1px solid rgba(255, 77, 77, 0.2);
+            color: var(--text-primary);
+            border-top-right-radius: 0;
+        }
+        
+        .chat-input {
+            display: flex;
+            padding: 15px;
+            border-top: 1px solid rgba(0, 242, 255, 0.1);
+        }
+        
+        .chat-input input {
+            flex: 1;
+            padding: 10px 15px;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(0, 242, 255, 0.2);
+            border-radius: 20px;
+            color: var(--text-primary);
+            outline: none;
+            transition: var(--transition);
+            font-family: inherit;
+        }
+        
+        .chat-input input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 10px rgba(0, 242, 255, 0.2);
+        }
+        
+        .chat-input button {
+            margin-left: 10px;
+            padding: 10px 15px;
+            background: rgba(0, 242, 255, 0.2);
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .chat-input button:hover,
+        .chat-input button:focus {
+            background: var(--primary-color);
+            color: var(--dark-bg);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .about-container {
+                flex-direction: column;
+            }
+            
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                padding-left: 70px;
+                padding-right: 0;
+                text-align: left;
+            }
+            
+            .timeline-dot {
+                left: 23px;
+            }
+            
+            .chat-assistant {
+                width: calc(100% - 40px);
+                left: 20px;
+                right: 20px;
+                bottom: 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                padding: 15px 20px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .hero {
+                padding: 0 20px;
+                padding-top: 100px;
+                height: auto;
+                min-height: 100vh;
+            }
+            
+            .section {
+                padding: 80px 0;
+            }
+            
+            .card {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="#" class="logo">SATVIK_JOGADAND<span>//PORTFOLIO</span></a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="particles" id="particles"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Strategic <span>Risk Management</span> & Insurance Solutions</h1>
+                <div class="divider"></div>
+                <p class="hero-subtitle">PPO @ Bajaj Allianz | PGDM '25 – Insurance & Risk Management | IRM Level 1 | National Insurance Academy</p>
+                <a href="#contact" class="btn">Contact Me</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Professional Profile</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="about-container">
+                <div class="card">
+                    <div class="about-text">
+                        <p>Hello, I'm Satvik Jogadand. As a specialist in Insurance and Risk Management, I develop comprehensive financial security frameworks with precision and strategic insight.</p>
+                        <p>My expertise lies in identifying vulnerabilities, quantifying exposures, and designing protection strategies that withstand unpredictable market forces while optimizing coverage and cost-efficiency.</p>
+                        
+                        <div style="margin-top: 40px;">
+                            <h3 style="margin-bottom: 20px; font-weight: 300; color: var(--text-primary);">Core Competencies</h3>
+                            <div class="skills-container">
+                                <div class="skill-tag">Risk Assessment</div>
+                                <div class="skill-tag">Strategic Planning</div>
+                                <div class="skill-tag">Financial Analysis</div>
+                                <div class="skill-tag">Leadership</div>
+                                <div class="skill-tag">Problem Solving</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+        <div class="container">
+            <div class="section-title">
+                <h2>Professional Experience</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">May 2024 - July 2024</div>
+                        <h3 class="timeline-title">Bajaj Allianz General Insurance</h3>
+                        <p class="timeline-desc">Developed comprehensive risk assessment frameworks and insurance solutions during my internship with this industry leader, gaining hands-on experience in underwriting and claims management.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Nov 2019 - Mar 2020</div>
+                        <h3 class="timeline-title">The Climate Reality Project</h3>
+                        <p class="timeline-desc">Contributed to climate change awareness initiatives, developing skills in project coordination, public engagement, and environmental risk assessment.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Apr 2019 - May 2019</div>
+                        <h3 class="timeline-title">UltraTech Cement</h3>
+                        <p class="timeline-desc">Analyzed operational processes and efficiency metrics in an industrial manufacturing environment, focusing on risk mitigation strategies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>Education & Certifications</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="about-container">
+                <div class="card">
+                    <div class="about-text">
+                        <h3 style="margin-bottom: 20px; font-weight: 300; color: var(--text-primary);">Education</h3>
+                        <div style="margin-bottom: 30px;">
+                            <h4 style="color: var(--primary-color); margin-bottom: 5px;">National Insurance Academy</h4>
+                            <p style="color: var(--text-secondary);">PGDM, Insurance and Risk Management · (July 2023 - March 2025)</p>
+                        </div>
+                        <div style="margin-bottom: 30px;">
+                            <h4 style="color: var(--primary-color); margin-bottom: 5px;">Institute of Risk Management</h4>
+                            <p style="color: var(--text-secondary);">Level-1 Certification · (March 2025)</p>
+                        </div>
+                        <div style="margin-bottom: 30px;">
+                            <h4 style="color: var(--primary-color); margin-bottom: 5px;">Symbiosis Centre for Management Studies</h4>
+                            <p style="color: var(--text-secondary);">BBA, HR & Finance · (2018 - 2021)</p>
+                        </div>
+                        
+                        <h3 style="margin-bottom: 20px; font-weight: 300; color: var(--text-primary);">Certifications</h3>
+                        <div class="skills-container">
+                            <div class="skill-tag">Managing Employee Performance</div>
+                            <div class="skill-tag">AI For Everyone</div>
+                            <div class="skill-tag">Lean Manufacturing</div>
+                            <div class="skill-tag">Life Insurance</div>
+                            <div class="skill-tag">Digital Accessibility</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Information</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="about-container">
+                <div class="card">
+                    <div class="about-text">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+91 6261414868</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>satvikjogadand@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <p>linkedin.com/in/satvikjogadand</p>
+                            </div>
+                        </div>
+                        
+                        <div class="voice-wave" aria-hidden="true">
+                            <div class="wave-bar" style="animation-delay: 0.1s"></div>
+                            <div class="wave-bar" style="animation-delay: 0.3s"></div>
+                            <div class="wave-bar" style="animation-delay: 0.5s"></div>
+                            <div class="wave-bar" style="animation-delay: 0.2s"></div>
+                            <div class="wave-bar" style="animation-delay: 0.4s"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Chat Assistant -->
+    <div class="chat-assistant" id="chatAssistant">
+        <div class="chat-header">
+            <div class="chat-status" aria-label="Online status"></div>
+            <div class="chat-title">ASSISTANT</div>
+            <button class="chat-close" id="chatClose" aria-label="Close chat"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="chat-message ai">
+                <div class="message-content">
+                    Hello, how can I help you today?
+                </div>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Type your message..." aria-label="Type your message">
+            <button id="chatSend" aria-label="Send message"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+    
+    <script>
+        // Initialize Particles
+        document.addEventListener('DOMContentLoaded', function() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random properties
+                const size = Math.random() * 5 + 1;
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100 + 100; // Start below viewport
+                const opacity = Math.random() * 0.5 + 0.1;
+                const duration = Math.random() * 20 + 10;
+                const delay = Math.random() * 5;
+                
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${posX}%`;
+                particle.style.top = `${posY}%`;
+                particle.style.opacity = opacity;
+                particle.style.animationDuration = `${duration}s`;
+                particle.style.animationDelay = `${delay}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+            
+            // Chat Assistant
+            const chatAssistant = document.getElementById('chatAssistant');
+            const chatClose = document.getElementById('chatClose');
+            const chatMessages = document.getElementById('chatMessages');
+            const chatInput = document.getElementById('chatInput');
+            const chatSend = document.getElementById('chatSend');
+            
+            // Sample responses
+            const responses = [
+                "Satvik is currently available for new opportunities in risk management.",
+                "The publication 'EFFECTS OF DEMONETIZATION ON PREPAID INSTRUMENT INDIA' is available upon request.",
+                "Satvik specializes in insurance and risk management strategies.",
+                "You can contact Satvik directly at +91 6261414868 or satvikjogadand@gmail.com",
+                "Satvik holds certifications in AI, Lean Manufacturing, and Digital Accessibility."
+            ];
+            
+            // Show assistant after delay
+            setTimeout(() => {
+                chatAssistant.classList.add('active');
+            }, 3000);
+            
+            // Close assistant
+            chatClose.addEventListener('click', () => {
+                chatAssistant.classList.remove('active');
+            });
+            
+            // Send message
+            function sendMessage() {
+                const message = chatInput.value.trim();
+                if (message) {
+                    // Add user message
+                    const userMessage = document.createElement('div');
+                    userMessage.className = 'chat-message user';
+                    userMessage.innerHTML = `<div class="message-content">${message}</div>`;
+                    chatMessages.appendChild(userMessage);
+                    
+                    // Clear input
+                    chatInput.value = '';
+                    
+                    // Scroll to bottom
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                    
+                    // Simulate typing
+                    setTimeout(() => {
+                        const typing = document.createElement('div');
+                        typing.className = 'chat-message ai';
+                        typing.innerHTML = `<div class="message-content">Typing<span class="typing-dots"></span></div>`;
+                        chatMessages.appendChild(typing);
+                        chatMessages.scrollTop = chatMessages.scrollHeight;
+                        
+                        // Send response after delay
+                        setTimeout(() => {
+                            chatMessages.removeChild(typing);
+                            
+                            const response = responses[Math.floor(Math.random() * responses.length)];
+                            const aiMessage = document.createElement('div');
+                            aiMessage.className = 'chat-message ai';
+                            aiMessage.innerHTML = `<div class="message-content">${response}</div>`;
+                            chatMessages.appendChild(aiMessage);
+                            chatMessages.scrollTop = chatMessages.scrollHeight;
+                        }, 1500);
+                    }, 500);
+                }
+            }
+            
+            // Send on button click or enter
+            chatSend.addEventListener('click', sendMessage);
+            chatInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    sendMessage();
+                }
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Intersection Observer for animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            document.querySelectorAll('.section, .card, .timeline-item').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
